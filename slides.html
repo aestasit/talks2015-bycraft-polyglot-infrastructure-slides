@@ -1,0 +1,957 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<title>Polyglot Infrastructure</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1274, user-scalable=no">
+	<link rel="stylesheet" href="themes/ribbon/styles/style.css">
+	<link rel="stylesheet" href="themes/ribbon/styles/print.css" media="print">
+	<!--
+		To apply styles to the certain slides
+		use slide ID to get needed elements
+		-->
+	<style>
+		#Cover h2 { color:#FFF; text-align:left; font-size:60px; }
+		#FitToWidth h2,
+		#FitToHeight h2 {
+			color:#FFF;
+			text-align:center;
+			}
+	</style>
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Polyglot Infrastructure</h1>
+		<p>Andrey Adamovich, Aestas/IT</p>
+	</header>
+	<div class="slide cover" id="Cover"><div>
+		<section>
+			<header>
+				<h2></h2>
+			</header><img src="images/COVER_POLYGLOT_INFRASTRUCTURE.png" />
+		</section>
+	</div></div>	
+	
+    
+    
+       
+    <div class="slide shout" id="1"><div>
+        <section>
+			<header>
+				<h2>About me</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="2"><div>
+        <section>
+			<header>
+				<h2>Andrey Adamovich</h2>
+			</header>    
+            <ul> 
+ <li>Bio: Developer, coach, speaker, author</li> 
+ <li>Company: Aestas/IT (<a href="http://aestasit.com">http://aestasit.com</a>)</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="3"><div>
+        <section>
+			<header>
+				<h2>Contact details</h2>
+			</header>    
+            <ul> 
+ <li>E-mail: <a href="mailto:andrey@aestasit.com">andrey@aestasit.com</a></li> 
+ <li>Linkedin: <a href="http://www.linkedin.com/in/andreyadamovich">http://www.linkedin.com/in/andreyadamovich</a></li> 
+ <li>Lanyrd: <a href="http://lanyrd.com/profile/andrey-adamovich">http://lanyrd.com/profile/andrey-adamovich</a></li> 
+ <li>GitHub: <a href="https://github.com/aadamovich">https://github.com/aadamovich</a></li> 
+ <li>SO: <a href="http://stackoverflow.com/users/162792/andrey-adamovich">http://stackoverflow.com/users/162792/andrey-adamovich</a></li> 
+ <li>Twitter: @codingandrey, @aestasit</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide cover shout shade" id="4"><div><section><header><h2>Let's start</h2></header> <img src="images/BG_START.jpg" alt="-" />
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="5"><div>
+        <section>
+			<header>
+				<h2>Let's start</h2>
+			</header>    
+            <ul> 
+ <li>People have different background, skills, interests and preferences</li> 
+ <li>Most of the problems have many (sub)optimal solutions</li> 
+ <li>People solve problems differently</li> 
+ <li>All that maps to a variety of <strong>solutions</strong> <strong>that</strong> actually <strong>work</strong></li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="6"><div>
+        <section>
+			<header>
+				<h2>All polyglot</h2>
+			</header>    
+            <ul> 
+ <li>&quot;Polyglot&quot; software development is a <strong>reality</strong></li> 
+ <li>Major ecosystems build <strong>loyal communities</strong> around them</li> 
+ <li>Communities accumulate <strong>reusable experience</strong></li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="7"><div>
+        <section>
+			<header>
+				<h2>But...</h2>
+			</header>    
+            <ul> 
+ <li>Software needs <strong>infrastructure</strong> to be <em>DEVELOPED</em> on</li> 
+ <li>Software needs <strong>infrastructure</strong> to be <em>DEPLOYED</em> on</li> 
+ <li>We need to be able to <strong>SUPPORT</strong> all of that!</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide cover shout shade" id="8"><div><section><header><h2>No surprise!</h2></header> <img src="images/BG_HATE.jpg" alt="-" />
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide cover shout shade" id="9"><div><section><header><h2>Ops hate Devs!</h2></header> <img src="images/BG_HATE.jpg" alt="-" />
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide cover shout shade" id="10"><div><section><header><h2>Destructive</h2></header> <img src="images/BG_DESTROY.jpg" alt="-" />
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide cover shout shade" id="11"><div><section><header><h2>The Unplanned</h2></header> <img src="images/BG_UNPLANNED.jpg" alt="-" />
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="12"><div>
+        <section>
+			<header>
+				<h2>Unplanned vs. failed</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/UNPLANNED_WORK_VS_FAILED_CHANGES.png" alt="uplanned" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="13"><div>
+        <section>
+			<header>
+				<h2>Unplanned vs. unique</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/UNPLANNED_WORK_VS_UNIQUE_CONFIGURATIONS.png" alt="uplanned" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="14"><div>
+        <section>
+			<header>
+				<h2>Late alignment issues</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/LATE_OPERATIONS_INVOLVEMENT.png" alt="late" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="15"><div>
+        <section>
+			<header>
+				<h2>Stability vs. agility</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="16"><div>
+        <section>
+			<header>
+				<h2>Why "polyglot" then?</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="17"><div>
+        <section>
+			<header>
+				<h2>You have no choice!</h2>
+			</header>    
+            <ul> 
+ <li>It brings agility</li> 
+ <li>It brings innovation</li> 
+ <li>It may move you forward faster</li> 
+ <li>And beat your competition!</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="18"><div>
+        <section>
+			<header>
+				<h2>But...</h2>
+			</header>    
+            <ul> 
+ <li>It needs to be under control!</li> 
+ <li>It needs to bring value!</li> 
+ <li>Not only immediate benefits needs to be considered,</li> 
+ <li>but also operational complexity!</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide cover shout shade" id="19"><div><section><header><h2>Changing architecture</h2></header> <img src="images/BG_CHANGE.jpg" alt="-" />
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="20"><div>
+        <section>
+			<header>
+				<h2>Local development</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/0A0_INITIAL_ARCHITECTURE.png" alt="arch" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="21"><div>
+        <section>
+			<header>
+				<h2>Splitting layers</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/0A1_SPLITTING_LAYERS.png" alt="arch" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="22"><div>
+        <section>
+			<header>
+				<h2>Scaling out</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/0A2_SCALING_OUT.png" alt="arch" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="23"><div>
+        <section>
+			<header>
+				<h2>Fail-over</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/0A3_FAILOVER.png" alt="arch" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="24"><div>
+        <section>
+			<header>
+				<h2>Performance tuning</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/0A4_PERFORMANCE_TUNING.png" alt="arch" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="25"><div>
+        <section>
+			<header>
+				<h2>Maintaining system</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/0A5_OPERATIONS.png" alt="arch" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="26"><div>
+        <section>
+			<header>
+				<h2>Expanding system</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/0A6_EXPANDING.png" alt="arch" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="27"><div>
+        <section>
+			<header>
+				<h2>What if?</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/0B0_INITIAL_ARCHITECTURE.png" alt="arch" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="28"><div>
+        <section>
+			<header>
+				<h2>Or even?</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/0C0_INITIAL_ARCHITECTURE.png" alt="arch" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="29"><div>
+        <section>
+			<header>
+				<h2>Splitting layers</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/0C1_SPLITTING_LAYERS.png" alt="arch" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="30"><div>
+        <section>
+			<header>
+				<h2>Scaling out</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/0C2_SCALING_OUT.png" alt="arch" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="31"><div>
+        <section>
+			<header>
+				<h2>Maintaining system</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/0C3_OPERATIONS.png" alt="arch" /> 
+</figure> 
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="32"><div>
+        <section>
+			<header>
+				<h2>And so on...</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide cover shout shade" id="33"><div><section><header><h2>What if you combine?</h2></header> <img src="images/BG_MEGA_ARCH.jpg" alt="-" />
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="34"><div>
+        <section>
+			<header>
+				<h2>Polyglot infrastructure is inevitable!</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide cover shout shade" id="35"><div><section><header><h2>Infrastructure as code</h2></header> <img src="images/BG_INFRA.png" alt="-" />
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="36"><div>
+        <section>
+			<header>
+				<h2>Infrastructure as code</h2>
+			</header>    
+            <ul> 
+ <li>Capture knowledge</li> 
+ <li>Reuse comminuty experience</li> 
+ <li>Automation over documentation</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="37"><div>
+        <section>
+			<header>
+				<h2>Infrastructure as code</h2>
+			</header>    
+            <ul> 
+ <li>Scripts (level 0)</li> 
+ <li>Provisioning tools (level 1)</li> 
+ <li>Images/Containers (level 2)</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="38"><div>
+        <section>
+			<header>
+				<h2>Provisioning tools</h2>
+			</header>    
+            <ul> 
+ <li>Puppet</li> 
+ <li>Chef</li> 
+ <li>Ansible</li> 
+ <li>Salt</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="39"><div>
+        <section>
+			<header>
+				<h2>Provisioning tools</h2>
+			</header>    
+            <ul> 
+ <li>Exist for a long time</li> 
+ <li>Big library of modules</li> 
+ <li>Lets express your architecture changes</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide cover shout shade" id="40"><div><section><header><h2>Reuse</h2></header> <img src="images/BG_REUSE.jpg" alt="-" />
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="41"><div>
+        <section>
+			<header>
+				<h2>Virtualization</h2>
+			</header>    
+            <ul> 
+ <li>VirtualBox</li> 
+ <li>AWS</li> 
+ <li>Azure</li> 
+ <li>Google cloud</li> 
+ <li>...</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="42"><div>
+        <section>
+			<header>
+				<h2>Containerization</h2>
+			</header>    
+            <ul> 
+ <li>Docker</li> 
+ <li>Kubernetes</li> 
+ <li>Mesos</li> 
+ <li>...</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide cover shout shade" id="43"><div><section><header><h2>Organizations are complex</h2></header> <img src="images/BG_ORG.jpg" alt="-" />
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide cover shout shade" id="44"><div><section><header><h2>Infrastructure layers</h2></header> <img src="images/BG_LAYERS.jpg" alt="-" />
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="45"><div>
+        <section>
+			<header>
+				<h2>Infrastructure layers</h2>
+			</header>    
+            <ol> 
+ <li>Developer machines</li> 
+ <li>Development tooling</li> 
+ <li>Server/environment management</li> 
+ <li>Network management</li> 
+ <li>...</li> 
+</ol>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="46"><div>
+        <section>
+			<header>
+				<h2>DevOps!</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="47"><div>
+        <section>
+			<header>
+				<h2>Sharing responsibility I</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/DEVOPS.png" alt="Share responsiblity" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="48"><div>
+        <section>
+			<header>
+				<h2>Sharing responsibility II</h2>
+			</header>    
+            <ul> 
+ <li>The focus of DevOps is on automating the tasks performed during the build, QA and deployment stage</li> 
+ <li>The risk of deployment errors is reduced drastically by having a strong automated testing suite, automated deployment workflow, well defined/automated rollback process</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="49"><div>
+        <section>
+			<header>
+				<h2>Reduce failed changes</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/UNPLANNED_WORK_VS_FAILED_CHANGES_REDUCED.png" alt="Story" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="50"><div>
+        <section>
+			<header>
+				<h2>Reduce number of unique configs</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/UNPLANNED_WORK_VS_UNIQUE_CONFIGURATIONS_REDUCED.png" alt="Story" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="51"><div>
+        <section>
+			<header>
+				<h2>Don't ignore operations!</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="52"><div>
+        <section>
+			<header>
+				<h2>Avoid</h2>
+			</header>    
+            <ul> 
+ <li>ShadowOps</li> 
+ <li>DevOoops</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="53"><div>
+        <section>
+			<header>
+				<h2>Broken communication</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/DEVOPS_FOREIGN_COUNTRIES.png" alt="com" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="54"><div>
+        <section>
+			<header>
+				<h2>Broken communication</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/DEVOPS_COMMUNICATION_1.png" alt="com" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="55"><div>
+        <section>
+			<header>
+				<h2>Play on the same field</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/DEVOPS_COMMUNICATION_2.png" alt="com" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="56"><div>
+        <section>
+			<header>
+				<h2>Port changes back to DEV!</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="57"><div>
+        <section>
+			<header>
+				<h2>The feedback loop</h2>
+			</header>    
+            <ul> 
+ <li>Through configuration management and deploy automation, we can deploy more often and reduce risk</li> 
+ <li>The feedback loop gets shorter</li> 
+ <li>Functionalities are rolled out with higher frequency</li> 
+ <li>Systems are always in a known state</li> 
+ <li>Changes to the system can be simulated and impacts calculated</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="58"><div>
+        <section>
+			<header>
+				<h2>Internal culture!</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="59"><div>
+        <section>
+			<header>
+				<h2>C.A.M.S</h2>
+			</header>    
+            <ul> 
+ <li><strong>Culture</strong> : People over processes and tools. Software is made by and for people.</li> 
+ <li><strong>Automation</strong> : Automation is essential for DevOps to gain quick feedback.</li> 
+ <li><strong>Measurement</strong> : DevOps finds a specific path to measurement. Quality and shared (or at least aligned) incentives are critical.</li> 
+ <li><strong>Sharing</strong> : Creates a culture where people share ideas, processes, and tools.</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="60"><div>
+        <section>
+			<header>
+				<h2>Conclusion</h2>
+			</header>    
+            <ul> 
+ <li>Polyglot infrastructure is a reality!</li> 
+ <li>Leverage DevOps principles</li> 
+ <li>Learn how to use provisioning tools!</li> 
+ <li>Virtualization/containerization</li> 
+</ul>
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide cover " id="61"><div><section><header><h2></h2></header> <img src="images/BG_EINSTIEN.jpg" alt="-" />
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="62"><div>
+        <section>
+			<header>
+				<h2>Reading material</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="63"><div>
+        <section>
+			<header>
+				<h2>The Phoenix Project</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/BOOK_PHOENIX_PROJECT.jpg" alt="Phoenix Project" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="64"><div>
+        <section>
+			<header>
+				<h2>Continuous Delivery</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/BOOK_CONTINUOUS_DELIVERY.jpg" alt="Cd" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="65"><div>
+        <section>
+			<header>
+				<h2>Release It</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/BOOK_RELEASE_IT.jpg" alt="Release It" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide" id="66"><div>
+        <section>
+			<header>
+				<h2>Inviting Disaster</h2>
+			</header>    
+            
+<figure> 
+ <img src="images/BOOK_INVITING_DISASTER.jpg" alt="Inviting" /> 
+</figure>
+
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="67"><div>
+        <section>
+			<header>
+				<h2>Questions?</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="68"><div>
+        <section>
+			<header>
+				<h2>Шчыра дзякую!</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="69"><div>
+        <section>
+			<header>
+				<h2>Cпасибо!</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+    
+       
+    <div class="slide shout" id="70"><div>
+        <section>
+			<header>
+				<h2>Thank you!</h2>
+			</header>    
+            
+		</section>
+	</div></div>
+    
+		
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="scripts/script.js"></script>
+	<!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+	<!-- Photos by John Carey — fiftyfootshadows.net -->
+</body>
+</html>
